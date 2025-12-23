@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="org.stockinventorydemo.stockinventorydemo.controllers.MainController">
+
+   <VBox spacing="12"
+         alignment="CENTER"
+         maxWidth="300">
+
+      <TextField fx:id="userField"
+                 promptText="Usuario"/>
+
+      <PasswordField fx:id="passField"
+                     promptText="Contraseña"/>
+
+      <Button text="Login"
+              maxWidth="Infinity"
+              onAction="#handleLogin"
+               defaultButton="true"/>
+
+      <Label fx:id="errorLabel"/>
+   </VBox>
+
+</StackPane>
