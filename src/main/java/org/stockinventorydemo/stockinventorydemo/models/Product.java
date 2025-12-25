@@ -1,39 +1,45 @@
 package org.stockinventorydemo.stockinventorydemo.models;
 
 public class Product {
-    int id;
-    int inventoryNumber;
-    int model;
+    private int id;
+    private String name;
+    private double price;
+    private int stock;
+    private String category;
 
-    public Product(){}
+    public Product() {}
 
-    public Product(int id, int inventoryNumber, int model) {
+    public Product(int id, String name, double price, int stock, String category) {
         this.id = id;
-        this.inventoryNumber = inventoryNumber;
-        this.model = model;
+        this.name = name;
+        this.price = price;
+        this.stock = stock;
+        this.category = category;
     }
 
-    public int getId() {
-        return id;
+    public Product(String name, double price, int stock) {
+        this.name = name;
+        this.price = price;
+        this.stock = stock;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public double getPrice() { return price; }
+    public void setPrice(double price) { this.price = price; }
+
+    public int getStock() { return stock; }
+    public void setStock(int stock) { this.stock = stock; }
+
+    public String getCategory() {
+        return category;
     }
 
-    public int getInventoryNumber() {
-        return inventoryNumber;
-    }
-
-    public void setInventoryNumber(int inventoryNumber) {
-        this.inventoryNumber = inventoryNumber;
-    }
-
-    public int getModel() {
-        return model;
-    }
-
-    public void setModel(int model) {
-        this.model = model;
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
